@@ -1,0 +1,22 @@
+#spring.application.name=security
+spring:
+  application:
+    name: security
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jwt_security
+    username: postgres
+    password: Madede_11
+    driver-class-name: org.postgresql.Driver # Helps to spring to detect best Driver Classname. From the Postgres Driver dependency
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true #With in the property hibernate I want to format the SQL
+    database: postgresql #tell JPA which DB we're using w/c is Postgresl
+    database-platform: org.hibernate.dialect.PostgreSQLDialect # this help spring performing and writing better queries to suite the postgres
+
+
